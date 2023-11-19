@@ -5,26 +5,6 @@
 </script>
 
 {#if data.uid}
-  <header class="flex items-center justify-between p-4 bg-primary text-primary-content">
-    <a href="/">
-      <h1 class="text-2xl">CookBook</h1>
-    </a>
-    {#if $currentUser}
-      <button class="btn btn-secondary">{$currentUser.displayName.split(" ")[0]}</button>
-    {:else}
-      <button
-        on:click={() => {
-          signIn().then((user) => {
-            console.log(user);
-          });
-        }}
-        class="btn btn-secondary"
-      >
-        Sign in
-      </button>
-    {/if}
-  </header>
-
   <slot />
 {:else}
   <div class="hero min-h-screen bg-base-200">

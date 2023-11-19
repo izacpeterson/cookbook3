@@ -1,6 +1,6 @@
 <script>
   import { addRecipe, currentUser } from "$lib/firebase.js";
-
+  import Header from "./Header.svelte";
   let title = "";
   let description = "";
   let ingredients = [];
@@ -24,7 +24,7 @@
   }}
   class="flex flex-col gap-4 p-4"
 >
-  <h1>New Recipe</h1>
+  <Header>New Recipe</Header>
 
   <div class="form-control w-full max-w-xs">
     <lablel class="label">
