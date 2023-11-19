@@ -38,6 +38,7 @@ export async function signIn() {
         currentUser.set(user);
         fetch(`/api/login?uid=${user.uid}`);
         resolve(user);
+        window.location.reload();
       })
       .catch((error) => {
         const errorCode = error.code;
